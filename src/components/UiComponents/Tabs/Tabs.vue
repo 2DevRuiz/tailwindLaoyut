@@ -1,5 +1,6 @@
+<!--Nota : agregar unos botones que permita mover el scroll del contenido de la sección de tabs -->
 <template>
-    <div class="w-full h-full min-h-full bg-white">
+    <div class="w-full h-full min-h-full">
         <!-- <div class="flex items-center justify-center rounded-lg p-16 dark:bg-slate-900 dark:text-white"> -->
         <div ref="tabContainer"
             class="flex h-auto w-full flex-col rounded-lg border bg-white border-slate-300 dark:border-slate-600 ">
@@ -28,7 +29,7 @@
 
             <!--- Header Section  -->
             <div
-                class="relative hidden w-full gap-4 border-b border-slate-300 px-2 sm:flex md:px-5 dark:border-slate-300">
+                class="relative hidden w-full gap-4 border-b border-slate-300 px-2 sm:flex md:px-5 dark:border-slate-300 md:overflow-x-auto">
                 <div class="absolute bottom-0 left-0 h-0.5  transition-transform duration-500" :style="{
                     width: underlineWidth + 'px',
                     transform: 'translateX(' + underlineOffset + 'px)',
@@ -44,7 +45,7 @@
             </div>
             <!--- Header Section-->
             <!-- Panel Section -->
-            <div class="h-full">
+            <div class="h-full min-h-[70vh] p-0.5">
                 <slot></slot>
             </div>
             <!-- Panel Section -->

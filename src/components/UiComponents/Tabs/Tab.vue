@@ -1,6 +1,6 @@
 <template>
     <!-- <div class="h-full"> -->
-    <div ref="tabs" class="flex h-full w-full tab" :class="active ? 'active' : ''">
+    <div ref="tabs" class="flex h-full min-h-[70vh] w-full tab rounded-md " :class="active ? 'active' : ''">
         <slot></slot>
     </div>
     <!-- </div> -->
@@ -23,6 +23,6 @@ const props = defineProps({
 }
 
 .tab.active {
-    @apply flex h-full w-full bg-cyan-900;
+    @apply flex;
 }
 </style>
