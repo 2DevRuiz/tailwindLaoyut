@@ -39,7 +39,7 @@
                     class="pb-2  pt-3 text-center md:min-w-24" :class="tabClass(index)">
                     <!-- {{ tab.charAt(0).toUpperCase() + tab.slice(1) }}-->
                     <!-- <span class=""> -->
-                    {{ tab.title }}
+                    {{ tab.attributes.tab_title.value }}
                     <!-- </span> -->
                 </div>
             </div>
@@ -85,6 +85,7 @@ onMounted(() => {
 
         }
     }
+    console.log(tabs.value[0].attributes.tab_title.value)
     updateUnderlinePosition();
 })
 
