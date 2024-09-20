@@ -6,9 +6,9 @@
             class="flex h-auto w-full flex-col rounded-lg border bg-white border-slate-300 dark:border-slate-600 ">
             <!--- Mobile Section-->
             <div class="block px-2 pt-3 sm:hidden dark:text-white">
-                <button @click="toggleDropdown"
+                <div @click="toggleDropdown"
                     class="relative flex w-full items-center justify-between rounded-md border border-slate-300 bg-white p-2 capitalize dark:border-slate-600 dark:bg-slate-800">
-                    {{ activeTab?.title }}
+                    {{ activeTab?.attributes.tab_title.value }}
                     <span class="h-5 w-5 transition-transform" :class="isDropdownOpen ? 'rotate-180' : 'rotate-0'">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 52 52"
                             enable-background="new 0 0 52 52" xml:space="preserve">
@@ -20,10 +20,11 @@
                         class="absolute left-0 top-12 z-10 w-full rounded-md border border-slate-300 bg-white shadow-md dark:border-slate-600 dark:bg-slate-800">
                         <div v-for="(tab, index) in tabs" :key="tab" @click="setSection(index)"
                             class="cursor-pointer px-4 py-2 hover:bg-slate-200 dark:hover:bg-slate-700">
-                            {{ tab.title }}
+                            {{ tab.attributes.tab_title.value }}
                         </div>
                     </div>
-                </button>
+                </div>
+
             </div>
             <!--- Mobile Section-->
 
